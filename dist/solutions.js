@@ -18,4 +18,7 @@ function formatCoordinate(coordinate) {
 function concatenateArrays(...arrays) {
     return arrays.reduce((combined, current) => combined.concat(current), []);
 }
+function getPopularCourses(courses, minStudents) {
+    return courses.filter((course) => course.isPublished && course.students >= minStudents);
+}
 export {};

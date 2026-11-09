@@ -26,3 +26,15 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
     [],
   );
 }
+
+interface Course {
+  title: string;
+  students: number;
+  isPublished: boolean;
+}
+
+function getPopularCourses(courses: Course[], minStudents: number): Course[] {
+  return courses.filter(
+    (course) => course.isPublished && course.students >= minStudents,
+  );
+}
